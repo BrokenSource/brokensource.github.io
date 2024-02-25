@@ -6,5 +6,5 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")+";"+
             [System.Environment]::GetEnvironmentVariable("Path","User")
 echo "`n> Cloning BrokenSource`n"
 git clone https://github.com/BrokenSource/BrokenSource
-echo "`n> Running brakeit.py`n"
+echo "`n> Running brakeit.py"
 python ./BrokenSource/brakeit.py
