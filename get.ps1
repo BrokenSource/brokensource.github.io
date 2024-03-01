@@ -39,7 +39,7 @@ Reload-Path
 # # Bootstrap BrokenSource Monorepo
 
 Print-Step "Cloning BrokenSource Repository"
-git clone https://github.com/BrokenSource/BrokenSource
+git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules
 
 Print-Step "Running brakeit.py"
 python ./BrokenSource/brakeit.py
