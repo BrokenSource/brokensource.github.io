@@ -25,11 +25,6 @@ winget install -e --id Git.Git --source winget
 Print-Step "Installing Python"
 winget install -e --id Python.Python.3.11 --scope=machine
 
-if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
-    Print-Step "Installing FFMPEG"
-    winget install -e --id FFMPEG.FFMPEG
-}
-
 Reload-Path
 
 # # Fail-safe: Install Python as admin if it's still not found
