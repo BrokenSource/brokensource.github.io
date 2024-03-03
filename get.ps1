@@ -2,8 +2,8 @@
 # # Utility functions
 
 function Reload-Path {
-    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";"
-              + [System.Environment]::GetEnvironmentVariable("Path"," User")
+    # Trivia: I don't know why, but this must be a single line command. I really don't PowerShell
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path"," User")
 }
 
 function Print-Step {
@@ -41,5 +41,5 @@ Reload-Path
 Print-Step "Cloning BrokenSource Repository"
 git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules
 
-Print-Step "Running brakeit.py"
+echo "`n> Running brakeit.py"
 python ./BrokenSource/brakeit.py
