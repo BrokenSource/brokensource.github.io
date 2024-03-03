@@ -32,6 +32,18 @@ if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
 
 Reload-Path
 
+# # Fail-safe: Install Python as admin if it's still not found
+
+if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
+    echo "`n:: Python Installation Error`n"
+    echo "Python was installed but not found. Maybe it was already installed without --scope=machine, or not enough permissions."
+    echo "> Will uninstall it, open a Powershell as Admin and install it. After that, please run this script again (irm url | iex)`n"
+    pause
+    winget uninstall -e --id Python.Python.3.11
+    Start-Process -FilePath "powershell" -ArgumentList "winget install -e ---id Python.Python.3.11 --scope=machine; pause" -Verb RunAs
+    exit
+}
+
 # # Bootstrap BrokenSource Monorepo
 
 Print-Step "Cloning BrokenSource Repository"
