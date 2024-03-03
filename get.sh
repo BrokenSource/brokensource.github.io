@@ -18,6 +18,16 @@ fi
 
 printf "\n:: Cloning BrokenSource Repository\n\n"
 git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules --jobs 4
+cd BrokenSource
 
+# Brakeit shouldn't spawn a shell as that will be bash  $SHELL
 printf "\n:: Running brakeit.py\n"
-python ./BrokenSource/brakeit.py
+export BRAKEIT_NO_SHELL=1
+$python ./brakeit.py
+
+# Source the venv
+printf ":: Sourcing the Virtual Environment\n\n"
+source `$python -m poetry env info --path`/bin/activate
+
+# Spawn a new user's shell
+exec $SHELL
