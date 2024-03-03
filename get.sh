@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# # Have Python
+
 # Attempt finding python executable, the binary might be
 # named differently based on platform/package manager
 python=""
@@ -14,18 +16,26 @@ if [ -z "$python" ]; then
     exit 1
 fi
 
-# # Standard installation procedure
+# # Have Git
+
+if [ -z "$(command -v git)" ]; then
+    echo "Git wasn't found, please install it for your platform"
+    exit 1
+fi
+
+# # "Standard" installation procedure
 
 printf "\n:: Cloning BrokenSource Repository\n\n"
 git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules --jobs 4
 cd BrokenSource
 
-# Brakeit shouldn't spawn a shell as that will be bash  $SHELL
+# Brakeit shouldn't spawn a shell on its own as that will be always bash
+# in this script, but we want the user's shell defined in $SHELL
 printf "\n:: Running brakeit.py\n"
 export BRAKEIT_NO_SHELL=1
 $python ./brakeit.py
 
-# Source the venv
+# Source the venv (we are in bash)
 printf ":: Sourcing the Virtual Environment\n\n"
 source `$python -m poetry env info --path`/bin/activate
 
