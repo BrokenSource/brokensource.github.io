@@ -3,7 +3,7 @@
 
 function Reload-Path {
     # Trivia: I don't know why, but this must be a single line command. I really don't PowerShell
-    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path"," User")
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
 }
 
 function Print-Step {
