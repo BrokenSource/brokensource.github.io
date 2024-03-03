@@ -6,7 +6,6 @@ python=""
 for option in python3 python; do
     if [ -x "$(command -v $option)" ]; then
         python=$(readlink -f $(which $option))
-        echo "Python was found at: $python"
         break
     fi
 done
@@ -17,8 +16,8 @@ fi
 
 # # Standard installation procedure
 
-echo "\n> Cloning BrokenSource Repository\n"
+printf "\n:: Cloning BrokenSource Repository\n\n"
 git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules --jobs 4
 
-echo "\n> Running brakeit.py"
+printf "\n:: Running brakeit.py\n"
 python ./BrokenSource/brakeit.py

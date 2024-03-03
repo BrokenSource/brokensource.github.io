@@ -7,7 +7,7 @@ function Reload-Path {
 }
 
 function Print-Step {
-    echo "`n> $args`n"
+    echo "`n:: $args`n"
 }
 
 # # Install basic dependencies
