@@ -42,7 +42,7 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
 # # Bootstrap BrokenSource Monorepo
 
 Print-Step "Cloning BrokenSource Repository"
-git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules
+git clone https://github.com/BrokenSource/BrokenSource --recurse-submodules --jobs 4
 
 echo "`n> Running brakeit.py"
 python ./BrokenSource/brakeit.py
