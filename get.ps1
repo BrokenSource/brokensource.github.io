@@ -26,7 +26,7 @@ if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
 
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
     Print-Step "Installing Python"
-    winget install -e --id Python.Python.3.11
+    winget install -e --id Python.Python.3.11 --scope=machine
 }
 
 if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
