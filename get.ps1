@@ -19,15 +19,11 @@ if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
 
 Reload-Path
 
-if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Print-Step "Installing Git"
-    winget install -e --id Git.Git --source winget
-}
+Print-Step "Installing Git"
+winget install -e --id Git.Git --source winget
 
-if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
-    Print-Step "Installing Python"
-    winget install -e --id Python.Python.3.11 --scope=machine
-}
+Print-Step "Installing Python"
+winget install -e --id Python.Python.3.11 --scope=machine
 
 if (-not (Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
     Print-Step "Installing FFMPEG"
