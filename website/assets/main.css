@@ -1,0 +1,11 @@
+
+/* Simple page */
+footer {
+  display: none;
+}
+
+/* Stretch button */
+.md-button {
+  text-align: center;
+  width: 100%;
+}

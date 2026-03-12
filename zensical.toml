@@ -1,0 +1,37 @@
+[project]
+site_name = "Broken Source"
+site_description = ""
+site_author = "Tremeschin"
+site_url  = "https://brokensource.github.io/"
+repo_url  = "https://github.com/BrokenSource/"
+repo_name = "GitHub"
+extra_css = ["assets/main.css"]
+docs_dir  = "website"
+nav = ["index.md"]
+
+[project.extra]
+generator = false
+
+[project.theme]
+variant = "modern"
+language = "en"
+features = [
+  "navigation.path",
+  "navigation.tabs",
+]
+
+[[project.theme.palette]]
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+media       = "(prefers-color-scheme: light)"
+scheme      = "default"
+primary     = "blue"
+accent      = "light-blue"
+
+[[project.theme.palette]]
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+media       = "(prefers-color-scheme: dark)"
+scheme      = "slate"
+primary     = "orange"
+accent      = "orange"
