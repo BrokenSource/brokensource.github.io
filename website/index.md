@@ -2,11 +2,9 @@
 title: Welcome
 ---
 
--> _Hey there, internet hitchhiker!_
-
 **BrokenSource** is a personal collection of professional Open Source projects from [tremeschin](https://github.com/Tremeschin).
 
-The name is a light joke on the development process, eternal maintenance, emotional and finantial struggles of code authoring - whereas ironically[^reverse] they are high quality with strong applications.
+The name is a light joke on the development process, eternal maintenance, emotional and finantial struggles of code authoring - whereas ironically[^reverse], they are high quality with strong applications.
 
 [^reverse]: Lately, company names means the exact opposite what they say.
 
