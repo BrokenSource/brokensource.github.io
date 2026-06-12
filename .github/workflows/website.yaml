@@ -1,4 +1,4 @@
-name: make-website
+name: website
 on:
   workflow_dispatch:
   push:
