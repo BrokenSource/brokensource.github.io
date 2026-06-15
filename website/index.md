@@ -2,7 +2,12 @@
 title: Welcome
 ---
 
-**BrokenSource** is a personal collection of professional Open Source projects from [tremeschin](https://github.com/Tremeschin).
+!!! warning "https://depth.brokensrc.dev was permanently[^move] moved to https://depth.tremeschin.com"
+    Projects are now hosted on my personal domain • and better maintained, welcome! :slight_smile:
+
+[^move]: All links will redirect here via wildcard rule, I may not renew the domain next year.
+
+**BrokenSource** is a personal collection of professional Open Source projects from [Tremeschin](https://github.com/Tremeschin).
 
 The name is a light joke on the development process, eternal maintenance, emotional and finantial struggles of code authoring - whereas ironically[^reverse], they are high quality with strong applications.
 
@@ -13,7 +18,7 @@ The name is a light joke on the development process, eternal maintenance, emotio
 
 [^stub]: This page _might_ get expanded in the future when [zensical](https://zensical.org/) better supports multi-project.
 
-[See All Projects in GitHub](https://github.com/orgs/BrokenSource/repositories?q=sort%3Astars){.md-button .md-button--primary}
+[Go to main website](https://tremeschin.com/){.md-button .md-button--primary}
 
 ## Contact
 
