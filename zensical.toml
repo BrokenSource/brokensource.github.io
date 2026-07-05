@@ -1,7 +1,7 @@
 [project]
 site_name = "Broken Source"
-site_description = "Community Open Source Projects by Tremeschin"
 site_author = "Tremeschin"
+site_description = "Community Open Source Projects from Tremeschin"
 site_url  = "https://brokensource.github.io/"
 repo_url  = "https://github.com/BrokenSource/"
 repo_name = "GitHub"
